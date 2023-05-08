@@ -1,0 +1,75 @@
+{
+	"name": "f8-tiktok-clone",
+	"version": "1.0.0",
+	"private": true,
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"clsx": "^1.2.1",
+		"normalize.css": "^8.0.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icomoon": "^2.5.7",
+		"react-router-dom": "^6.9.0",
+		"react-scripts": "5.0.1"
+	},
+	"devDependencies": {
+		"@types/customize-cra": "^1.0.0",
+		"@types/node": "^16.7.13",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"@types/react-router-dom": "^5.3.3",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"customize-cra": "^1.0.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-config-standard-with-typescript": "^34.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-react": "^7.32.2",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.2",
+		"prettier": "^2.8.4",
+		"prettier-eslint": "^15.0.1",
+		"prettier-plugin-organize-imports": "^3.2.2",
+		"react-app-rewired": "^2.2.1",
+		"sass": "^1.60.0",
+		"typescript": "*"
+	},
+	"scripts": {
+		"start": "react-app-rewired start",
+		"build": "react-app-rewired build",
+		"eject": "react-app-rewired eject",
+		"prepare": "husky install",
+		"lint": "eslint --fix \"src/**/*.{js,ts,js,tsx}\"",
+		"pretty": "prettier --write \"src/**/*.{js,ts,tsx}\""
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts,tsx}": [
+			"yarn lint",
+			"yarn pretty"
+		]
+	},
+	"engines": {
+		"node": ">= v16.19.0",
+		"npm": "please-use-yarn",
+		"yarn": ">= 1.22.19"
+	}
+}

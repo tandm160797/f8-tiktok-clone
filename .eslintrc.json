@@ -1,0 +1,46 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"settings": {
+		"react": {
+			"version": "18.2.0"
+		}
+	},
+
+	"plugins": ["react"],
+	"extends": ["standard-with-typescript", "react-app", "prettier"],
+
+	"rules": {
+		// TS
+		"@typescript-eslint/strict-boolean-expressions": "off",
+
+		// JS
+		"arrow-body-style": ["error", "as-needed"],
+
+		// React
+		"react/function-component-definition": [
+			"error",
+			{
+				"namedComponents": "arrow-function",
+				"unnamedComponents": "arrow-function"
+			}
+		],
+		"react/self-closing-comp": [
+			"error",
+			{
+				"html": true,
+				"component": true
+			}
+		]
+	},
+
+	"overrides": []
+}
