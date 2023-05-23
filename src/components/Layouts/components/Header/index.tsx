@@ -1,7 +1,9 @@
-import Icon from '@components/Icon';
-import Image from '@components/Image';
 import clsx from 'clsx';
 import { useState } from 'react';
+
+import Icon from '@components/Icon';
+import Image from '@components/Image';
+import { Button } from '@components/InputFields';
 import styles from './Header.module.scss';
 
 const Header = (): JSX.Element => {
@@ -27,9 +29,9 @@ const Header = (): JSX.Element => {
 				</div>
 
 				<div className={styles.actions}>
-					<button type="button">Tải lên</button>
-					<button type="button">Đăng nhập</button>
-					<button type="button">More</button>
+					<Button>Tải lên</Button>
+					<Button>Đăng nhập</Button>
+					<Button>More</Button>
 				</div>
 			</div>
 		</header>
