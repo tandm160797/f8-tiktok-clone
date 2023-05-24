@@ -1,7 +1,7 @@
-import Icon from '@components/Icon';
-import Image from '@components/Image';
 import clsx from 'clsx';
 import { useState } from 'react';
+
+import { Button, Icon, Image } from '@components';
 import styles from './Header.module.scss';
 
 const Header = (): JSX.Element => {
@@ -27,9 +27,30 @@ const Header = (): JSX.Element => {
 				</div>
 
 				<div className={styles.actions}>
-					<button type="button">Tải lên</button>
-					<button type="button">Đăng nhập</button>
-					<button type="button">More</button>
+					<Button to="abc" variant="primary" size="small" prefixIcon={<Icon icon="search" size={16} />}>
+						Tải lên
+					</Button>
+					<Button
+						variant="outline"
+						onClick={() => {
+							console.log(1);
+						}}
+						suffixIcon={<Icon icon="search" size={16} />}
+					>
+						Đăng nhập
+					</Button>
+					<Button
+						disabled
+						size="large"
+						onClick={() => {
+							console.log(12);
+						}}
+					>
+						More
+					</Button>
+					<Button href="https://google.com" target="_blank" variant="text">
+						More
+					</Button>
 				</div>
 			</div>
 		</header>

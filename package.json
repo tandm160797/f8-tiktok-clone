@@ -30,6 +30,7 @@
 		"@types/react-dom": "^18.0.0",
 		"@types/react-router-dom": "^5.3.3",
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"css-loader": "^6.7.4",
 		"customize-cra": "^1.0.0",
 		"eslint": "^8.34.0",
 		"eslint-config-prettier": "^8.6.0",
@@ -46,6 +47,8 @@
 		"prettier-plugin-organize-imports": "^3.2.2",
 		"react-app-rewired": "^2.2.1",
 		"sass": "^1.60.0",
+		"sass-loader": "^13.3.0",
+		"style-loader": "^3.3.3",
 		"typescript": "*"
 	},
 	"scripts": {

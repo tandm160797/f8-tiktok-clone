@@ -20,6 +20,7 @@
 
 	"rules": {
 		// TS
+		"@typescript-eslint/no-dynamic-delete": "off",
 		"@typescript-eslint/strict-boolean-expressions": "off",
 
 		// JS

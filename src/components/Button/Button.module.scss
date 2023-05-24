@@ -1,0 +1,103 @@
+.button {
+	min-width: 100px;
+	padding: 9px 16px;
+	border-radius: 4px;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 1.6rem;
+	font-weight: $bold-fw;
+
+	cursor: pointer;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	border: 1px solid transparent;
+	border-color: rgba(22, 24, 35, 0.12);
+	position: relative;
+
+	& + .button {
+		margin-left: 8px;
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+
+	&:not([disabled]):hover {
+		background-color: rgba(22, 24, 35, 0.03);
+	}
+
+	.icon {
+		display: inline-flex;
+	}
+
+	.icon + .title,
+	.title + .icon {
+		margin-left: 8px;
+	}
+}
+
+.button.fullWidth {
+	width: 100%;
+}
+
+// Button size
+.button.small {
+	min-width: 80px;
+	padding: 4px 8px;
+	font-size: 1.4rem;
+}
+
+.button.large {
+	min-width: 110px;
+	padding: 12px 20px;
+	font-size: 1.8rem;
+}
+
+// Button shape
+.button.circle {
+	border-radius: 1000px;
+}
+
+.button.round {
+	width: auto;
+	min-width: auto;
+	border-radius: 50%;
+}
+
+// Button variant
+.button.text {
+	border-color: transparent;
+
+	&:not([disabled]):hover {
+		text-decoration: underline;
+		background-color: transparent;
+	}
+}
+
+.button.primary {
+	color: $white-color;
+	background-color: $primary-color;
+
+	&:not([disabled]):hover {
+		background: linear-gradient(
+				0deg,
+				rgba($color: $black-color, $alpha: 0.06),
+				rgba($color: $black-color, $alpha: 0.059)
+			),
+			$primary-color;
+	}
+}
+
+.button.outline {
+	color: $primary-color;
+	border-color: currentColor;
+
+	&:not([disabled]):hover {
+		background-color: rgba($color: $primary-color, $alpha: 0.06);
+	}
+}
