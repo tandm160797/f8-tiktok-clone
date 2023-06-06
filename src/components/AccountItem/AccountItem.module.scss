@@ -1,0 +1,48 @@
+.accountItem {
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	transition: background 200ms ease-in-out 0s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba($color: $black-main-color, $alpha: 0.03);
+	}
+
+	.avatar {
+		width: 40px;
+		height: 40px;
+		margin-right: 8px;
+		border-radius: 50%;
+	}
+
+	.info {
+		flex: 1;
+
+		.wrapper {
+			.name {
+				color: $black-main-color;
+				font-weight: $bold-fw;
+				font-size: 1.6rem;
+				margin-top: -2px;
+				max-width: 145px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.tick {
+				margin-left: 4px;
+			}
+		}
+
+		.suggestDesc {
+			color: rgba($color: $black-main-color, $alpha: 0.75);
+			font-weight: $regular-fw;
+			font-size: 1.2rem;
+			max-width: 145px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+}
