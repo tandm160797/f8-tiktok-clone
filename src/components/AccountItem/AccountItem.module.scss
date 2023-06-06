@@ -1,0 +1,41 @@
+.accountItem {
+	padding: 8px;
+	display: flex;
+	align-items: center;
+
+	.avatar {
+		width: 32px;
+		height: 32px;
+		margin-right: 8px;
+	}
+
+	.info {
+		flex-grow: 1;
+
+		.wrapper {
+			.name {
+				color: $black-main-color;
+				font-weight: $bold-fw;
+				font-size: 1.6rem;
+				margin-top: -2px;
+				max-width: 145px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.tick {
+				margin-left: 4px;
+			}
+		}
+
+		.suggestDesc {
+			color: rgba($color: $black-main-color, $alpha: 0.75);
+			font-weight: $regular-fw;
+			font-size: 1.2rem;
+			max-width: 145px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+}
