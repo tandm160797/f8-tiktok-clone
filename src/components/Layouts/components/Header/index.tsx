@@ -27,8 +27,18 @@ const Header = (): JSX.Element => {
 					render={attrs => (
 						<div className={styles.searchResult} tabIndex={-1} {...attrs}>
 							<Popper>
+								<div className={styles.searchTitle}>Accounts</div>
 								{[1, 2, 3].map((_, index) => (
-									<AccountItem key={index} />
+									<AccountItem
+										key={index}
+										account={{
+											name: 'hoa_2309',
+											suggestDesc: 'Ngô Ngọc Hoà',
+											age: 24,
+											avatar:
+												'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/122b95d1cd9bd6f885598a039dc6b74d~c5_300x300.webp?x-expires=1686204000&x-signature=vKVHLEI5p80KefPl6frQcioeEq0%3D'
+										}}
+									/>
 								))}
 							</Popper>
 						</div>
