@@ -1,6 +1,6 @@
 import './GlobalStyles.scss';
 
-interface GlobalStylesProps {
+export interface GlobalStylesProps {
 	children: JSX.Element;
 }
 

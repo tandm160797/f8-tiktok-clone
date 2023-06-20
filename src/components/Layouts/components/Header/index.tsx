@@ -3,12 +3,21 @@ import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
 import { AccountItem, Button, Icon, Image, Popper } from '@components';
+import Menu from '@components/Menu';
+import { type MenuItemProps } from '@components/Menu/MenuItem';
 import styles from './Header.module.scss';
+
+const MENU_ITEMS: MenuItemProps[] = [
+	{ icon: <Icon icon="language" size={20} />, title: 'Tiếng Việt' },
+	{ icon: <Icon icon="question" size={20} />, title: 'Phản hồi và trợ giúp', to: '/feedback' },
+	{ icon: <Icon icon="keyboard" size={20} />, title: 'Phím tắt trên bàn phím' },
+	{ icon: <Icon icon="dark-mode" size={20} />, title: 'Chế độ tối' }
+];
 
 const Header = (): JSX.Element => {
 	const [state] = useState(true);
 
-	const [data, setData]: any = useState([]);
+	const [data, setData]: any = useState<any>([]);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -36,7 +45,7 @@ const Header = (): JSX.Element => {
 											suggestDesc: 'Ngô Ngọc Hoà',
 											age: 24,
 											avatar:
-												'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/122b95d1cd9bd6f885598a039dc6b74d~c5_300x300.webp?x-expires=1686204000&x-signature=vKVHLEI5p80KefPl6frQcioeEq0%3D'
+												'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/42a81079b5885e152707b170d63ba2df~c5_100x100.jpeg?x-expires=1687363200&x-signature=I%2FQgN46TMTcnFOrFtrCISr4IsEs%3D'
 										}}
 									/>
 								))}
@@ -62,7 +71,9 @@ const Header = (): JSX.Element => {
 				<div className={styles.actions}>
 					<Button>+ Tải lên</Button>
 					<Button variant="primary">Đăng nhập</Button>
-					<Icon className={styles.moreIcon} icon="more-vertical" size={20} />
+					<Menu items={MENU_ITEMS}>
+						<Icon className={styles.moreIcon} icon="more-vertical" size={20} />
+					</Menu>
 				</div>
 			</div>
 		</header>

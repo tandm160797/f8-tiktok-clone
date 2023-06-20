@@ -1,0 +1,15 @@
+.menuItem {
+	padding: 10px 8px 10px 16px !important;
+	margin-left: 0px !important;
+
+	border-radius: 0;
+	justify-content: left;
+	font-weight: $semi-bold-fw;
+	background-color: $white-color;
+	line-height: 1.84rem;
+
+	&:hover {
+		text-decoration: none !important;
+		background-color: rgba($black-main-color, 0.03) !important;
+	}
+}
