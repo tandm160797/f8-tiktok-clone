@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { Icon } from '@components';
 import styles from './AccountItem.module.scss';
 
-interface AccountItemProps {
+export interface AccountItemProps {
 	className?: string;
 	account: {
 		name: string;

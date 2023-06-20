@@ -7,7 +7,6 @@ const HeaderOnlyLayout = (): JSX.Element => {
 
 	return (
 		<div className={styles.headerOnlyLayout}>
-			{/* <Header /> */}
 			<div className={styles.container}>
 				<div className={styles.content}>{outlet}</div>
 			</div>

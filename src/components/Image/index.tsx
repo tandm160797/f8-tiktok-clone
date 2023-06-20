@@ -3,7 +3,7 @@ import { cloneElement } from 'react';
 import imageSet from '@components/Image/imageSet';
 import { toCamelCase } from '@utils';
 
-interface ImageProps {
+export interface ImageProps {
 	image: string;
 	width: string | number;
 	height: string | number;

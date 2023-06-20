@@ -10,7 +10,7 @@ import { Link, type LinkProps } from 'react-router-dom';
 
 import styles from './Button.module.scss';
 
-interface ButtonProps {
+export interface ButtonProps {
 	to?: string;
 	href?: string;
 	disabled?: boolean;
