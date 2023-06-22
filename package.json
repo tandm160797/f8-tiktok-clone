@@ -25,6 +25,8 @@
 		"react-scripts": "5.0.1"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.6.5",
+		"@commitlint/config-conventional": "^17.6.5",
 		"@types/customize-cra": "^1.0.0",
 		"@types/node": "^16.7.13",
 		"@types/react": "^18.0.0",
