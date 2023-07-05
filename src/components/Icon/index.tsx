@@ -3,6 +3,7 @@ import iconSet from './selection.json';
 
 // console.log(iconList(iconSet));
 const IconNames = [
+	'arrow-back',
 	'dark-mode',
 	'keyboard',
 	'language',
