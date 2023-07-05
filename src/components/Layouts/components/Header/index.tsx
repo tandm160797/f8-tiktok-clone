@@ -8,7 +8,25 @@ import { type MenuItemProps } from '@components/Menu/MenuItem';
 import styles from './Header.module.scss';
 
 const MENU_ITEMS: MenuItemProps[] = [
-	{ icon: <Icon icon="language" size={20} />, title: 'Tiếng Việt' },
+	{
+		icon: <Icon icon="language" size={20} />,
+		title: 'Tiếng Việt',
+		children: {
+			title: 'Ngôn ngữ',
+			data: [
+				{
+					type: 'language',
+					title: 'English',
+					code: 'en'
+				},
+				{
+					type: 'language',
+					title: 'Tiếng Việt',
+					code: 'vi'
+				}
+			]
+		}
+	},
 	{ icon: <Icon icon="question" size={20} />, title: 'Phản hồi và trợ giúp', to: '/feedback' },
 	{ icon: <Icon icon="keyboard" size={20} />, title: 'Phím tắt trên bàn phím' },
 	{ icon: <Icon icon="dark-mode" size={20} />, title: 'Chế độ tối' }
@@ -18,6 +36,10 @@ const Header = (): JSX.Element => {
 	const [state] = useState(true);
 
 	const [data, setData]: any = useState<any>([]);
+
+	const handleMenuChange = (menuItem: MenuItemProps): void => {
+		console.log(menuItem);
+	};
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -71,7 +93,7 @@ const Header = (): JSX.Element => {
 				<div className={styles.actions}>
 					<Button>+ Tải lên</Button>
 					<Button variant="primary">Đăng nhập</Button>
-					<Menu items={MENU_ITEMS}>
+					<Menu items={MENU_ITEMS} onChange={handleMenuChange}>
 						<Icon className={styles.moreIcon} icon="more-vertical" size={20} />
 					</Menu>
 				</div>

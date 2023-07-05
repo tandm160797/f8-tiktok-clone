@@ -1,0 +1,19 @@
+.menuHeader {
+	margin-top: -8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+	max-height: 50px;
+
+	.backIcon {
+		left: 16px;
+		position: absolute;
+	}
+
+	.headerTitle {
+		font-size: 1.6rem;
+		font-weight: $semi-bold-fw;
+	}
+}
